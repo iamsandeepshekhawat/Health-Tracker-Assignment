@@ -1,0 +1,48 @@
+<mat-toolbar class="flex justify-between items-center bg-blue-50 shadow-md p-4">
+  <span class="text-2xl ml-40 font-bold font-serif">
+    <span class="text-green-500 text-4xl font-serif">H</span>ealth <span class="text-green-500 text-4xl font-serif" >T</span>racker
+  </span>
+
+  <div class="flex space-x-4 mr-48 p-2 pr-8 pl-8  bg-white">
+    <button mat-flat-button class="text-white bg-green-500 p-3 pr-10 pl-10 rounded-full border-4 border-green-700 hover:border-green-500 hover:bg-green-600 hover:text-white shadow-lg shadow-neutral-800 transition duration-300 ease-in-out transform hover:scale-105" (click)="openAddWorkoutModal()">Add Workout</button>
+  </div>
+</mat-toolbar>
+
+<style>
+  ::ng-deep .bg-blue-50 {
+    background-color: #ebf8ff !important;
+  }
+  ::ng-deep .bg-green-500 {
+    background-color: #48bb78 !important;
+  }
+  ::ng-deep .bg-green-600 {
+    background-color: #38a169 !important;
+  }
+  ::ng-deep .border-green-700 {
+    border-color: #2f855a !important;
+  }
+  ::ng-deep .border-green-500 {
+    border-color: #48bb78 !important;
+  }
+  ::ng-deep .text-green-500 {
+    color: #48bb78 !important;
+  }
+  ::ng-deep .text-white {
+    color: #ffffff !important;
+  }
+  ::ng-deep .rounded-xl {
+    border-radius: 1rem !important;
+  }
+  ::ng-deep .shadow-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  }
+  ::ng-deep .transition {
+    transition: all 0.3s ease-in-out !important;
+  }
+  ::ng-deep .transform {
+    transform: scale(1) !important;
+  }
+  ::ng-deep .hover\:scale-105:hover {
+    transform: scale(1.05) !important;
+  }
+</style>

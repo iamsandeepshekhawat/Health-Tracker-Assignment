@@ -1,0 +1,45 @@
+<div
+  class="lg:flex lg:mx-12 mx-6 justify-center p-8 border-10 border-white gap-8 lg:space-y-0 space-y-8 bg-blue-50 rounded-lg">
+  <div class="border p-8 lg:w-1/4 bg-white rounded-lg w-full shadow-md">
+    <mat-list class="border-b-2 overflow-y-auto">
+      <mat-list-item
+        *ngFor="let user of users"
+        (click)="onSelectUser(user)"
+        [ngClass]="{
+          'bg-green-500 text-white': user === selectedUser,
+          'bg-white': user !== selectedUser,
+        }"
+        class="p-2 border-t-2 hover:bg-green-100">
+        {{ user.name }}
+      </mat-list-item>
+    </mat-list>
+  </div>
+  <div class="max-w-[800px] lg:w-[800px] bg-white p-6 rounded-lg shadow-md">
+    <h5 class="text-green-500 font-bold">{{ selectedUser?.name }}'s Workout Progress</h5>
+    <canvas #myChart></canvas>
+  </div>
+</div>
+
+<style>
+  .bg-blue-50 {
+    background-color: #ebf8ff !important;
+  }
+  .bg-green-500 {
+    background-color: #48bb78 !important;
+  }
+  .bg-green-100 {
+    background-color: #c6f6d5 !important;
+  }
+  .text-green-500 {
+    color: #48bb78 !important;
+  }
+  .text-white {
+    color: #ffffff !important;
+  }
+  .rounded-lg {
+    border-radius: 0.5rem !important;
+  }
+  .shadow-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  }
+</style>
